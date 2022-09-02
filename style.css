@@ -406,6 +406,7 @@ header {
   font-family: var(--font-action);
   text-align: center;
   word-spacing: 1rem;
+  justify-content: end;
 }
 
 .btn {
@@ -421,7 +422,7 @@ header {
 
 }
 
-.btn:hover {
+.btn:hover, button:hover, #link-topo:hover {
   cursor: pointer;
   background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-primary-two));
   background: linear-gradient(to left, #1bd9ff, #5f0092);
@@ -459,7 +460,7 @@ header {
   border-radius: 3rem;
   position: relative;
   background-color: var(--color-primary-one);
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: center;
 }
 
