@@ -455,7 +455,7 @@ header {
 .card-contato {
   width: 200px;
   height: 200px;
-  padding: 80px 40px;
+  padding: 55px 40px;
   border-radius: 3rem;
   position: relative;
   background-color: var(--color-primary-one);
@@ -465,6 +465,11 @@ header {
 
 .card-contato h2{
   font-family: var(--font-action);  
+}
+
+.card-contato i{
+  font-size: 25px;
+  margin-bottom: 25px;
 }
 
 
