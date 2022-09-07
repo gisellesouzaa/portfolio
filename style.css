@@ -11,14 +11,14 @@
 }
 
 body {
-  background-image: url(./imagens/CREATIVE_4.png);
+  background-image: url(./imagens/bgBodyDark.png);
 }
 
 :root {
-  --color-primary-one: rgb(0, 174, 177);
-  --color-primary-two: #004650;
-  --color-second-one: #610094;
-  --color-second-two: #3f0071;
+  --color-primary-one: #00B4D8;
+  --color-primary-two: #036dab;
+  --color-second-one: #790094;
+  --color-second-two: #4f0071;
   --color-bg-dark: #000a1a;
   --color-contrast: #caf0f8;
   
@@ -29,10 +29,7 @@ body {
   --font-action: "Muli", serif;
   
   /* 
-  --font-title: ;
   --font-secundary: "Josefin Slab", serif;  FONTE USADA NO P DO BANNER 
-  --color-primary-one: rgb(2, 115, 117);
-  --color-primary-one: #00B4D8; 
   */
 }
 
@@ -148,12 +145,17 @@ header {
   opacity: 0.5;
 }
 
-/*** TITULO DA PAGINA ***/
+/*** TITULO DA PAGINA - BANNER***/
 
 .banner {
   position: absolute;
   top: 30%;
-  left: 15%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center;
+
 }
 
 .banner h1 {
@@ -194,6 +196,18 @@ header {
   margin-right: 10px;
 }
 
+/* #music {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 1rem 3rem;
+  opacity: 0;
+  animation: moveBanner 1s 0.9s forwards;
+  background: var(--color-second-one);
+  background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-second-one));
+  background: linear-gradient(to left, var(--color-primary-one), var(--color-second-one));
+  border-radius: 5rem;
+} */
+
 @keyframes moveBanner {
   0% {
     transform: translateY(10rem) rotateY(-30deg);
@@ -209,9 +223,9 @@ header {
 .sidebar {
   width: 16rem;
   height: 100vh;
-  background: #004650;
-  background: -webkit-linear-gradient(to bottom, #004650, #000a1a); 
-  background: linear-gradient(to bottom, #004650, #000a1a); 
+  background: #036dab;
+  background: -webkit-linear-gradient(to bottom, #0f4174, #000a1a); 
+  background: linear-gradient(to bottom, #036dab, #00001a); 
   opacity: 0.9;
   position: fixed;
   top: 0;
@@ -239,14 +253,14 @@ header {
 .menu-link {
   font-family: var(--font-action);
   font-size: 1.5rem;
-  color: var(--color-primary-one);
-  text-shadow: 3px 3px 15px var(--color-second-one);
+  color: var(--color-contrast);
+  text-shadow: 2px 2px 2px var(--color-second-two);
   transition: color 0.5s;
 }
 
 .menu-link:hover {
-  color: #fff;
-  text-shadow: 3px 3px 15px var(--color-second-one);
+  color: var(--color-second-one);
+  /* text-shadow: 3px 3px 15px var(--color-second-one); */
 }
 
 .social-media {
@@ -272,9 +286,9 @@ header {
 
 .social-media i:hover {
   font-size: 1.4rem;
-  background-color: var(--color-primary-two);
-  color: var(--color-contrast);
-  box-shadow: .06rem .06rem 0.5rem var(--color-contrast);
+  /* background-color: var(--color-second-one); */
+  color: var(--color-second-one);
+  box-shadow: .2rem -0.1rem .3rem var(--color-second-one);
   transition: 0.5s;
 }
 
@@ -317,6 +331,11 @@ header {
   position: absolute;
 } 
 
+.card-imageprofile:hover {
+  transform: rotate(15deg);
+  transition: 0.7s;
+}
+
 .card-imageprofile img {
   width: 15.125rem;
   height: 15.75rem;
@@ -326,8 +345,8 @@ header {
 }
 
 .card-imageprofile img:hover {
-  transform: rotate(-10deg);
-  transition: 0.5s;
+  transform: rotate(-30deg);
+  transition: 0.7s;
 }
 
 .card-sobre {
@@ -390,9 +409,9 @@ header {
   padding: 0.6rem;
   border-radius: 0.5rem;
   position: relative;
-  background: #004650;
-  background: -webkit-linear-gradient(to bottom, #004650, #000a1a); 
-  background: linear-gradient(to bottom, #004650, #000a1a); 
+  background: #036dab;
+  background: -webkit-linear-gradient(to bottom, #036dab, #000a1a); 
+  background: linear-gradient(to bottom, #036dab, #00001a); 
   opacity: 0.8;
   border:var(--color-primary-one) 1px solid;
 }
@@ -491,6 +510,8 @@ header {
   border-radius: 3rem;
   position: relative;
   background-color: var(--color-primary-one);
+  color: var(--color-second-two);
+  text-shadow: #fff 0.07rem 0.07rem 0.2rem;
   opacity: 0.9;
   text-align: center;
 }

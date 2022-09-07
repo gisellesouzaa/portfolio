@@ -37,16 +37,27 @@
 
     <header id="home">
       <div class="img-wrapper">
-        <img src="imagens/bgTeste1-normal.gif" alt="">
+        <img src="imagens/bgHeaderGiselleSouza.gif" alt="Imagem de fundo com luzes azul e rosa descendo na vertical">
       </div>
       <div class="banner">
         <h1>Giselle Souza</h1>
         <p>Desenvolvedora Full Stack</p>
-        <button>
-          <i class="fa-solid fa-volume-high"></i>
-          <!-- <i class="fa-solid fa-volume-xmark"></i> -->
-          Ative o som
+
+        <audio id="audio" src="./musicaBg.mp3"></audio>
+        <button class="control">
+          <span class="btPlay">
+            <i class='fa-solid fa-volume-high'></i>
+            Ative o som
+          </span>
         </button>
+
+
+        <!-- <audio controls class="music" id="audio" name="music">
+          <source src="i_am_the_doctor.ogg" type="audio/ogg">
+          <source src="./musicaBg.mp3" type="audio/mpeg">
+          Seu navegador não possui suporte ao elemento audio
+        </audio> -->
+
       </div>
     </header>
 
@@ -78,7 +89,7 @@
       <div class="sobre">
         <div class="card-imageprofile">
           <div class="imageprofile"></div>
-          <img src="./imagens/capa Giselle de.jpg" alt="Foto de Perfil Giselle">
+          <img src="./imagens/FotoGiselleSouza.jpg" alt="Foto de Perfil Giselle">
         </div>
         <div class="card-sobre">
           <p> Trabalhei em diferentes áreas como Indústria, Turismo, Empreendedorismo e Assessoria Bancária, que

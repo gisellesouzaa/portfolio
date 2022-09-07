@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Hind Guntur
+- Font Author: Copyright (c) 2015 Indian Type Foundry (info@indiantypefoundry.com)
+- Font Source: http://fonts.gstatic.com/s/hindguntur/v12/wXKyE3UZrok56nvamSuJd_zymVczn9zaj5Ju.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
