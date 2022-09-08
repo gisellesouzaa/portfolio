@@ -51,13 +51,6 @@
           </span>
         </button>
 
-
-        <!-- <audio controls class="music" id="audio" name="music">
-          <source src="i_am_the_doctor.ogg" type="audio/ogg">
-          <source src="./musicaBg.mp3" type="audio/mpeg">
-          Seu navegador não possui suporte ao elemento audio
-        </audio> -->
-
       </div>
     </header>
 
@@ -248,33 +241,47 @@
         <div class="card-contato">
           <i class="fa fa-envelope"></i>
           <h2>E-mail</h2>
+
+          <p class="btn" id="input1" data-clipboard-target="#input1" value="teste1">giselle_souza97@yahoo.com.br</p>
+          
+          <a href="mailto:giselle_souza97@yahoo.com.br" target="_blank">
+            <button>Enviar menssagem →</button>
+          </a>
         </div>
         <div class="card-contato">
           <i class="fa-brands fa-whatsapp"></i>
           <h2>Whatsapp</h2>
+          <p class="btn">(11) 99905.9579</p>
+          <a href="https://api.whatsapp.com/send?phone=5511999059579&text=Ol%C3%A1!%20Tudo%20bem%3F%20Vi%20seu%20portf%C3%B3lio..."
+          target="_blank">
+            <button>Enviar menssagem →</button>
+          </a>
         </div>
         <div class="card-contato">
           <i class="fa-brands fa-linkedin"></i>
           <h2>Linkedin</h2>
+          <p class="btn">@giselle-de-souza-gabriel</p>
+          <a href="https://www.linkedin.com/in/giselle-de-souza-gabriel/" target="_blank">
+            <button>Enviar menssagem →</button>
+          </a>
+          
         </div>
       </div>
-    </section>
+
+    
 
     <footer>
       <div class="footer-content">
-        <p>
-          Giselle Souza
-        </p>
-        <div class="social-list">
-          <ul>
-            <li><a href="https://www.linkedin.com/in/giselle-de-souza-gabriel/" target="_blank"><i
-                  class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/gisellesouzaa" target="_blank"><i class="fab fa-github-alt"></i></a></li>
-            <li><a href="mailto:giselle_souza97@yahoo.com.br" target="_blank"><i class="fa fa-envelope"></i></a></li>
-          </ul>
-        </div>
+        <a href="https://github.com/gisellesouzaa" target="_blank">
+          <p>Feito de 🤍 por Giselle Souza</p>
+          <p>Saiba mais acessando o Github.</p>
+          <i class="fab fa-github"></i>
+        </a>
       </div>
     </footer>
+
+  </section>
+
     <a href="#home" id="link-topo">
       <i class="fas fa-arrow-up"></i>
     </a>
@@ -282,6 +289,7 @@
   </div>
 </body>
 
+<script src="clipboard.js-master/dist/clipboard.min.js"></script>
 <script src="script.js"></script>
 
 </html>

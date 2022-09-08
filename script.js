@@ -1,3 +1,5 @@
+// var clipboard = new Clipboard('.btn');
+
 document.querySelector(".hamburguer").addEventListener("click", () =>
 document.querySelector(".container").classList.toggle("show-menu")
 );
@@ -21,5 +23,6 @@ document.querySelector('.control').onclick = function(){
   }
 }
 
-
+document.querySelector('#copie').select();
+document.execCommand('copy');
 
