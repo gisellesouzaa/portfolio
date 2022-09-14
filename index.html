@@ -4,30 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Giselle Souza" />
-  <link rel="stylesheet" href="style.css" />
-
+  
   <!-- Fivicons: -->
   <link rel="apple-touch-icon" sizes="180x180" href="./imagens/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./imagens/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./imagens/favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-
+  
   <!-- Fonts: -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Monoton&family=Press+Start+2P&family=Rubik+Glitch&family=Share+Tech+Mono&family=Silkscreen&family=Space+Mono&display=swap"
-    rel="stylesheet">
+  href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Monoton&family=Press+Start+2P&family=Rubik+Glitch&family=Share+Tech+Mono&family=Silkscreen&family=Space+Mono&display=swap"
+  rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Electrolize&display=swap" rel="stylesheet">
-
+  
   <title>Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="author" content="Giselle Souza" />
+  <meta name="description" content="Portfólio de desenvolvimento web frontend com os projetos realizados pela Giselle Souza.">
 </head>
 
 <body>
-
   <div class="container">
-
     <div class="hamburguer">
       <div class="line" id="line1"></div>
       <div class="line" id="line2"></div>
@@ -42,7 +41,6 @@
       <div class="banner">
         <h1>Giselle Souza</h1>
         <p>Desenvolvedora Full Stack</p>
-
         <audio id="audio" src="./musicaBg.mp3"></audio>
         <button class="control">
           <span class="btPlay">
@@ -50,7 +48,6 @@
             Ative o som
           </span>
         </button>
-
       </div>
     </header>
 
@@ -62,18 +59,22 @@
           <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
           <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
           <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
-
         </ul>
       </nav>
+
       <div class="social-media">
-        <a href="https://www.linkedin.com/in/giselle-de-souza-gabriel/" target="_blank"><i
-            class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/gisellesouzaa" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/giselle-de-souza-gabriel/" aria-label="Linkedin Giselle Souza" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/gisellesouzaa" aria-label="Github Giselle Souza" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
         <a href="https://api.whatsapp.com/send?phone=5511999059579&text=Ol%C3%A1!%20Tudo%20bem%3F%20Vi%20seu%20portf%C3%B3lio..."
-          target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        aria-label="Whatsapp Giselle Souza" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
       </div>
     </aside>
-
 
     <section class="sessao-sobre" id="sobre">
       <div class="sessao-header">
@@ -91,12 +92,14 @@
           </p>
 
           <p> Mesmo não trabalhando diretamente com programação, sempre tive contato e facilidade com tecnologias.
-            Trabalhando, por exemplo, em projetos de arquitetura 3D, vetorização de logos e marketing digital.</p>
+            Trabalhando, por exemplo, em projetos de arquitetura 3D, vetorização de logos e marketing digital.
+          </p>
 
           <p>Eu vejo na programação um mundo de possibilidades que une essa minha bagagem de conhecimentos com a prática
             de entregar soluções ao cliente. E assim, encontrei na programação uma paixão que me move a buscar cada vez
             mais novos desafios e conhecimentos. O que para mim sempre foi a chave do sucesso na vida pessoal e
-            profissional.</p>
+            profissional.
+          </p>
         </div>
       </div>
     </section>
@@ -157,7 +160,6 @@
       </div>
 
       <div class="projetos">
-
         <div class="card">
           <div class="card-img-wrapper">
             <img src="./imagens/webpages/paginaDSMeta.png" alt="imagem do projeto DS Meta" />
@@ -233,7 +235,7 @@
           </div>
           <div class="card-info">
             <h2>Agrupador de links</h2>
-            <p> Agrupador de links com algumas das minhas webpages hospedadas no GitHub. Também pode ser usado para
+            <p>Agrupador de links com algumas das minhas webpages hospedadas no GitHub. Também pode ser usado para
               agrupar links das redes sociais.</p>
             <button class="btn">Testar página</button>
             <div class="tecs">
@@ -251,7 +253,7 @@
           </div>
           <div class="card-info">
             <h2>Mensagens de Aniversário</h2>
-            <p> Site interativo que ajuda a escolher mensagens de aniversário.</p>
+            <p>Site interativo que ajuda a escolher mensagens de aniversário.</p>
             <button class="btn">Testar página</button>
             <div class="tecs">
               <img src="https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript" alt="Javascript">
@@ -333,7 +335,7 @@
           </div>
           <div class="card-info">
             <h2>Formulário Simples</h2>
-            <p> Formulário simples para cadastramento de desenvolvedores front-end, back-end ou fullstack.</p>
+            <p>Formulário simples para cadastramento de desenvolvedores front-end, back-end ou fullstack.</p>
             <button class="btn">Testar página</button>
             <div class="tecs">
               <img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5" alt="HTML">
@@ -398,8 +400,8 @@
           </a>
         </div>
 
-      </div>
-
+      </div> <!-- Fim sessão contato -->
+      
       <footer>
         <div class="footer-content">
           <a href="https://github.com/gisellesouzaa" target="_blank">
@@ -412,13 +414,11 @@
 
     </section>
 
-    <a href="#home" id="link-topo">
+    <a href="#home" id="link-topo" aria-label="Ir para o topo da página">
       <i class="fas fa-arrow-up"></i>
     </a>
 
+    <script src="script.js"></script>
+  </div>
 </body>
-
-<script src="clipboard.js-master/dist/clipboard.min.js"></script>
-<script src="script.js"></script>
-
 </html>
