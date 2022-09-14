@@ -406,7 +406,7 @@ header {
   background: #036dab;
   background: -webkit-linear-gradient(to bottom, #036dab, #000a1a); 
   background: linear-gradient(to bottom, #036dab, #00001a); 
-  opacity: 0.8;
+  opacity: 0.9;
   border:var(--color-primary-one) 1px solid;
   margin: 0 0.5rem 1.5rem;
 }
@@ -464,26 +464,38 @@ header {
   color: #fff;
   width: 100%;
   margin-bottom: 0.5rem;
-  height: 40%;
+  height: 35%;
+  /* border: 2px red solid; */
 }
 
 .card-info button {
   width: 8rem;
   height: 2rem;
-  margin-bottom: 0.5rem;  
   background-color: var(--color-second-one);
   box-shadow: var(--color-primary-two) 0.1rem 0.1rem 0.1rem;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-info button.construcao {
+  background: rgb(66, 66, 66);
+}
+
+.card-info button.construcao:hover {
+  background: rgb(66, 66, 66);
 }
 
 .tecs {
-  color: #90e0ef;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+  word-spacing: 1rem;
+  /* color: #90e0ef;
+  text-align: center;
   text-transform: uppercase;
   font-family: var(--font-action);
   font-size: 0.8rem;
-  text-align: center;
-  word-spacing: 1rem;
-  opacity: 0.4;
+  opacity: 0.4; 
+  */
 }
 
 /* ** CONTATO ** */
