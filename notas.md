@@ -4,8 +4,8 @@ GIFs grandes não são eficientes para exibir conteúdo animado. Use vídeos MPE
 Veicule imagens que tenham o tamanho adequado para economizar dados da rede celular e melhorar o tempo de carregamento. Saiba mais.
 [Redimensione imagens](https://web.dev/uses-responsive-images/?utm_source=lighthouse&utm_medium=devtools)
 
-Formatos de imagem como WebP e AVIF costumam ter uma compressão melhor que PNG e JPEG, o que gera downloads mais rápidos e menos consumo dados. Saiba mais.
-[imagens em formatos modernos](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=devtools)
+<!-- Formatos de imagem como WebP e AVIF costumam ter uma compressão melhor que PNG e JPEG, o que gera downloads mais rápidos e menos consumo dados. Saiba mais.
+[imagens em formatos modernos](https://web.dev/uses-webp-images/?utm_source=lighthouse&utm_medium=devtools) -->
 
 Os recursos estão bloqueando a primeira exibição da sua página. Exiba JS/CSS crítico inline e adie todos os JS/estilos não críticos. Saiba mais.
 [bloqueio de renderização](https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=devtools)
