@@ -37,7 +37,8 @@ html {
 }
 
 /*** CONF GERAIS***/
-button {
+button,
+.btn {
   font-family: var(--font-action);
   color: #eee;
   border: none;
@@ -49,7 +50,8 @@ button {
 button:hover, 
 .banner button:hover, 
 #link-topo:hover, 
-.card-contato button:hover {
+.card-contato button:hover,
+.btn:hover{
   background: -webkit-linear-gradient(to left, #1bd9ff, #5f0092);
   background: linear-gradient(to left, #1bd9ff, #5f0092);
 }
@@ -555,22 +557,29 @@ header {
 }
 
 .card-contato p, 
-.card-contato button {
+.card-contato button,
+.btn {
   margin-top: 20px;
   opacity: 0;
 }
 
-.card-contato button {
+.card-contato button,
+.btn {
+  display: block;
+  margin-inline: auto;
   background: var(--color-second-one);
   background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-second-one));
   background: linear-gradient(to left, var(--color-primary-one), var(--color-second-one));
   width: 10rem;
   height: 2rem;
   border-radius: 15px;
+  font-size: 0.8rem;
+  padding: 8px;
   
 }
 .card-contato:hover p, 
-.card-contato:hover button {
+.card-contato:hover button,
+.card-contato:hover .btn {
   opacity: 0.9;
 }
 
