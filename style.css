@@ -38,7 +38,8 @@ html {
 
 /*** CONF GERAIS***/
 button,
-.btn {
+.btnContact,
+.btnCard {
   font-family: var(--font-action);
   color: #eee;
   border: none;
@@ -49,9 +50,9 @@ button,
 
 button:hover, 
 .banner button:hover, 
-#link-topo:hover, 
-.card-contato button:hover,
-.btn:hover{
+.btnCard:hover,
+.btnContact:hover,
+#link-topo:hover{ 
   background: -webkit-linear-gradient(to left, #1bd9ff, #5f0092);
   background: linear-gradient(to left, #1bd9ff, #5f0092);
 }
@@ -471,19 +472,23 @@ header {
   /* border: 2px red solid; */
 }
 
-.card-info button {
+.btnCard {
+  display: block;
+  margin-inline: auto;
   width: 8rem;
   height: 2rem;
   background-color: var(--color-second-one);
   box-shadow: var(--color-primary-two) 0.1rem 0.1rem 0.1rem;
   margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  padding: 8px;
 }
 
-.card-info button.construcao {
+.card-info .construcao {
   background: rgb(66, 66, 66);
 }
 
-.card-info button.construcao:hover {
+.card-info .construcao:hover {
   background: rgb(66, 66, 66);
 }
 
@@ -557,14 +562,14 @@ header {
 }
 
 .card-contato p, 
-.card-contato button,
-.btn {
+/* .card-contato button, */
+.btnContact {
   margin-top: 20px;
   opacity: 0;
 }
 
-.card-contato button,
-.btn {
+/* .card-contato button, */
+.btnContact {
   display: block;
   margin-inline: auto;
   background: var(--color-second-one);
@@ -578,8 +583,8 @@ header {
   
 }
 .card-contato:hover p, 
-.card-contato:hover button,
-.card-contato:hover .btn {
+/* .card-contato:hover button, */
+.card-contato:hover .btnContact {
   opacity: 0.9;
 }
 
