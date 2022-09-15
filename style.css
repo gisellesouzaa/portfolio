@@ -314,7 +314,7 @@ header {
 
 .imageprofile {
   width: 15.125rem;
-  height: 16.8rem;
+  height: 15.125rem;
   background-color: var(--color-primary-one);
   box-shadow: var(--color-primary-one) 1px 1px 10px 2px;
   border-radius: 2rem;
