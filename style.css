@@ -485,11 +485,12 @@ header {
 }
 
 .card-info .construcao {
-  background: rgb(66, 66, 66);
-}
-
-.card-info .construcao:hover {
-  background: rgb(66, 66, 66);
+  font-weight: 600;
+  color: #000;
+  text-shadow: -1px 0 rgb(202, 96, 35), 0 1px rgb(202, 96, 35), 1px 0 rgb(202, 96, 35), 0 -1px rgb(202, 96, 35);
+  background-image: url(https://i.pinimg.com/736x/a8/eb/4c/a8eb4c6e3963e05255ffd155c42feffc.jpg);
+  background-size: cover;
+  filter: grayscale(0.4);
 }
 
 .tecs {
