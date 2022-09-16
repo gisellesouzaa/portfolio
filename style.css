@@ -296,7 +296,7 @@ header {
 
 }
 
-.sessao-header h1 {
+.sessao-header h2 {
   font-weight: normal;
   font-family: var(--font-subtitle);
   font-size: 2.5rem;
@@ -449,13 +449,14 @@ header {
   text-align: center;
 }
 
-.card-info h2 {
+.card-info h3 {
   font-family: var(--font-primary);
   font-weight: 500;
   line-height: 1.5rem;
   color: var(--color-primary-one);
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0, 0.6);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; 	
+  font-size: 1.5em;
 }
 
 .card-info p {
@@ -497,14 +498,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly; 
-  word-spacing: 1rem;
-  /* color: #90e0ef;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: var(--font-action);
-  font-size: 0.8rem;
-  opacity: 0.4; 
-  */
 }
 
 /* ** CONTATO ** */
@@ -584,12 +577,11 @@ header {
   
 }
 .card-contato:hover p, 
-/* .card-contato:hover button, */
 .card-contato:hover .btnContact {
   opacity: 0.9;
 }
 
-.card-contato:hover h2{
+.card-contato:hover h3{
   font-size: 1.3rem;
 }
 

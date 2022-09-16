@@ -25,8 +25,8 @@ As cores de primeiro e segundo plano não têm uma taxa de contraste suficiente.
 
 # W3
 
-The element button must not appear as A descendant of the a element.
-<a> <button>Enviar
+<!-- The element button must not appear as A descendant of the a element.
+<a> <button>Enviar -->
 
 Considere usar o h1elemento apenas como um título de nível superior
 *apenas 1 na página
