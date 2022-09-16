@@ -13,14 +13,14 @@ Os recursos estão bloqueando a primeira exibição da sua página. Exiba JS/CSS
 Grandes payloads de rede geram custos para o usuário e estão diretamente relacionados a tempos de carregamento maiores. Saiba mais.
 [cargas de rede](https://web.dev/total-byte-weight/?utm_source=lighthouse&utm_medium=devtools)
 
-Defina uma largura e altura explícitas em elementos de imagem para reduzir mudanças de layout e melhorar a CLS. Saiba mais
+<!-- Defina uma largura e altura explícitas em elementos de imagem para reduzir mudanças de layout e melhorar a CLS. Saiba mais
 *logo tecs no card projetos
-[ mudanças repentinas de layout ](https://web.dev/optimize-cls/?utm_source=lighthouse&utm_medium=devtools#images-without-dimensions)
+[ mudanças repentinas de layout ](https://web.dev/optimize-cls/?utm_source=lighthouse&utm_medium=devtools#images-without-dimensions) -->
 
 
-As cores de primeiro e segundo plano não têm uma taxa de contraste suficiente.
+<!-- As cores de primeiro e segundo plano não têm uma taxa de contraste suficiente.
 *tag p, sobre
-[ contraste de cor](https://dequeuniversity.com/rules/axe/4.4/color-contrast?utm_source=lighthouse&utm_medium=devtools)
+[ contraste de cor](https://dequeuniversity.com/rules/axe/4.4/color-contrast?utm_source=lighthouse&utm_medium=devtools) -->
 
 
 # W3
@@ -28,8 +28,8 @@ As cores de primeiro e segundo plano não têm uma taxa de contraste suficiente.
 <!-- The element button must not appear as A descendant of the a element.
 <a> <button>Enviar -->
 
-Considere usar o h1elemento apenas como um título de nível superior
-*apenas 1 na página
+<!-- Considere usar o h1elemento apenas como um título de nível superior
+*apenas 1 na página -->
 
 # opção copiar em JS:
 document.querySelector('#copie').select();
