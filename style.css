@@ -10,8 +10,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url(./imagens/bgBodyDark.png);
+  border: orange 1px solid;
+}
+
+main {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
@@ -32,9 +43,7 @@ body {
   */
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 /*** CONF GERAIS***/
 button,
@@ -46,6 +55,9 @@ button,
   border-radius: 0.5rem;
   cursor: pointer;
   box-shadow: 0.1rem 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+  background: var(--color-second-one);
+  background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-second-one));
+  background: linear-gradient(to left, var(--color-primary-one), var(--color-second-one));
 }
 
 button:hover, 
@@ -147,6 +159,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   opacity: 0.5;
 }
 
@@ -173,6 +186,9 @@ header {
   margin-bottom: 2rem;
   opacity: 0;
   animation: moveBanner 1s 0.5s forwards;
+
+  -webkit-box-reflect: below 0px linear-gradient 
+  /* (transparent, ); */
 }
 
 .banner h2 {
@@ -294,6 +310,7 @@ header {
   align-items: center;
   justify-content: center;
   letter-spacing: 0.1rem;
+  border: yellow 1px solid;
 
 }
 
@@ -304,6 +321,7 @@ header {
   color: var(--color-primary-one);
   border-bottom: solid 3px var(--color-second-one);
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 /* ** SOBRE ** */
@@ -312,8 +330,11 @@ header {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 77vh;
+  height: 100%;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
+
+  border: red 1px solid;
 }
 
 .imageprofile {
@@ -345,8 +366,13 @@ header {
 }
 
 .card-sobre {
-  width: 50%;
+  /* width: 50%;
+  min-width: 500px; */
+  width: 700px;
+  height: 100%;
   text-align: justify;
+  border: green 1px solid;
+
 }
 
 .card-sobre p {
@@ -365,15 +391,16 @@ header {
   display: flex;
   justify-content: space-evenly; 
   align-items: center;
-  height: 80vh;
+  flex-wrap: wrap;
+  min-height: 80vh;
 }
 
 .card-tecs i{
-  font-size: 5rem;
+  font-size: 4rem;
   word-spacing: 5rem;
   text-shadow: 0.1rem 0.1rem 1rem #a01ce7;
   color: var(--color-primary-one);
-  margin-bottom: 1rem;
+  margin: 2rem;
 }
 
 .card-tecs i:hover{
@@ -402,16 +429,16 @@ header {
 }
 
 .card {
-  flex: 0 1 30%;
   position: relative;
-  min-width: 18rem;
-  height: 75vh;
+  flex: 0 1 30%;
+  min-width: 280px;
+  height: 75vh; 
+  min-height: 450px;
   padding: 0.6rem;
   border-radius: 0.5rem;
   background: #036dab;
   background: -webkit-linear-gradient(to bottom, #036dab, #000a1a); 
   background: linear-gradient(to bottom, #036dab, #00001a); 
-  /* opacity: 0.9; */
   border:var(--color-primary-one) 1px solid;
   margin: 0 0.5rem 1.5rem;
 }
@@ -449,6 +476,8 @@ header {
   position: relative; 
   transition: all 1s; 
   text-align: center;
+  border: 2px yellow solid;
+
 }
 
 .card-info h3 {
@@ -472,7 +501,7 @@ header {
   width: 100%;
   margin-bottom: 0.5rem;
   height: 35%;
-  /* border: 2px red solid; */
+  border: 2px red solid;
 }
 
 .btnCard {
@@ -480,11 +509,11 @@ header {
   margin-inline: auto;
   width: 8rem;
   height: 2rem;
-  background-color: var(--color-second-one);
-  box-shadow: var(--color-primary-two) 0.1rem 0.1rem 0.1rem;
   margin-bottom: 1.5rem;
   font-size: 0.8rem;
   padding: 8px;
+
+  box-shadow: var(--color-second-one) 0.1rem 0.1rem 0.1rem; 
 }
 
 .card-info .construcao {
@@ -509,7 +538,13 @@ header {
 .sessao-contato{
   background-image: url(imagens/bgContact.png);
   background-size: cover;
+  background-position: top;
   padding: 2rem 0 0 ;
+  height: 100%;
+  min-height: 600px;
+  position: relative;
+  padding-bottom: 7rem;
+  border: greenyellow solid 5px;
 }
 
 .contato {
@@ -517,27 +552,32 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly; 
   align-items: center;
-  height: 65vh;
-  margin-bottom: 2rem;
-  margin: 0 10%;
-  /* border: 1px solid salmon; */
-  
+  position: relative;
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid salmon;
 }
 
 .card-contato {
   width: 250px;
   height: 200px;
   padding: 6% 5%;
+  text-align: center;
   border-radius: 3rem;
   position: relative;
   background-color: var(--color-primary-one);
   color: var(--color-second-two);
   text-shadow: #fff 0.07rem 0.07rem 0.2rem;
   opacity: 0.9;
-  text-align: center;
   font-family: var(--font-action);  
   box-shadow: var(--color-primary-one) 1px 1px 8px 1px;
   margin: 10px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%; */
 }
 
 .card-contato:hover {
@@ -598,13 +638,17 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
 
 .footer-content{
-  width: 60%;
+  /* width: 60%; */
+  /* min-width: 200px; */
   /* display: flex; */
   /* justify-content: space-between; */
-  /* border: blue 1px solid; */
+  border: blue 1px solid;
   text-align: center;
   text-shadow: #000 2px 2px 3px;
 
@@ -622,15 +666,6 @@ footer{
   font-size: 1.3rem;
 }
 
-/* .social-list a{
-  margin: 0 2rem;
-  color: #a7a7a7;
-  font-size: 1.3rem;
-}
-
-.social-list ul {
-  display: flex;
-} */
 
 #link-topo{
   position: fixed;
@@ -647,12 +682,48 @@ footer{
   color: #fff;
   border-radius: .3rem;
   box-shadow:  0 0.1rem 0.6rem #00000009;
+  z-index: 2;
 }
 
-@media (max-width: 600px){
-
- /* ** PROJETOS ** */
-.card { 
-  min-width: 20rem;
+@media (max-width: 650px){
+  
+  .img-wrapper video {
+    object-position: left;
+  }
 }
+
+@media (max-width: 380px){
+
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner h2,
+  .sessao-header h2 {
+    font-size: 1.8rem
+  }
+
+/* Contato */
+  .card-contato {
+    color: rgb(225, 4, 188);
+    text-shadow: var(--color-bg-dark) 0.04rem 0.04rem 0.1rem;
+    background: rgba(0, 191, 255, 0.261);
+    border: 1px solid #ffffff7d;
+    box-shadow:  rgb(225, 4, 188) 1px 1px 8px 1px; 
+    transition: .5s;
+  }
+  
+  .card-contato i {
+    margin-bottom: 10px;
+  }
+  
+  .card-contato p, 
+  .card-contato .btnContact {
+    opacity: 1;
+  }
+  
+  .card-contato h3{
+    font-size: 1rem;
+  }
+  
 }
