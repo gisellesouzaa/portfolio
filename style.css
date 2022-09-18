@@ -16,7 +16,6 @@ html {
 
 body {
   background-image: url(./imagens/bgBodyDark.png);
-  border: orange 1px solid;
 }
 
 main {
@@ -26,7 +25,7 @@ main {
 }
 
 :root {
-  --color-primary-one: #00B4D8;
+  --color-primary-one: #04d9ff;
   --color-primary-two: #036dab;
   --color-second-one: #790094;
   --color-second-two: #4f0071;
@@ -37,16 +36,11 @@ main {
   --font-subtitle: 'Audiowide', cursive;
   --font-text: 'Electrolize', sans-serif;
   --font-action: "Muli", serif;
-  
-  /* 
-  --font-secundary: "Josefin Slab", serif;  FONTE USADA NO P DO BANNER 
-  */
 }
 
 
 
 /*** CONF GERAIS***/
-button,
 .btnContact,
 .btnCard {
   font-family: var(--font-action);
@@ -58,15 +52,14 @@ button,
   background: var(--color-second-one);
   background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-second-one));
   background: linear-gradient(to left, var(--color-primary-one), var(--color-second-one));
+  text-shadow: #000 1px 1px 1px;
 }
-
-button:hover, 
-.banner button:hover, 
+ 
 .btnCard:hover,
 .btnContact:hover,
 #link-topo:hover{ 
-  background: -webkit-linear-gradient(to left, #1bd9ff, #5f0092);
-  background: linear-gradient(to left, #1bd9ff, #5f0092);
+  background: -webkit-linear-gradient(to left, #3fdcfc, #7c00be);
+  background: linear-gradient(to left, #3fdcfc, #7c00be);
 }
 
 /*** MENU HAMBURGUER***/
@@ -177,18 +170,17 @@ header {
 }
 
 .banner h1 {
-  color: #fff;
-  text-shadow: 0.1rem 0.2rem 4px var(--color-second-two);
+  color: rgb(255, 206, 255);
   font-size: 3.5rem;
   font-family: var(--font-primary);
   font-weight: 200;
   line-height: 3.5rem;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: moveBanner 1s 0.5s forwards;
+  animation: glow 2s ease-in infinite alternate,
+  moveBanner 1s 0.5s forwards;
+  -webkit-box-reflect: below 0px linear-gradient; 
 
-  -webkit-box-reflect: below 0px linear-gradient 
-  /* (transparent, ); */
 }
 
 .banner h2 {
@@ -196,24 +188,78 @@ header {
   font-weight: 400;
   color: #fff;
   font-size: 2rem;
-  text-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.7);
-  margin-bottom: 2rem;
+  text-shadow: 0 0 5px var(--color-primary-one);
+  margin-bottom: 2.5rem;
   opacity: 0;
   animation: moveBanner 1s 0.7s forwards;
 }
 
-.banner button {
+.control{
+  width: 20rem;
+  margin-inline: auto;
+  opacity: 0;
+  animation: moveBanner 1s 1.5s forwards;
+  font-family: var(--font-action);
+  border-radius: 0.5rem;
+  cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 1rem 3rem;
-  opacity: 0;
-  animation: moveBanner 1s 0.9s forwards;
-  background: var(--color-second-one);
-  background: -webkit-linear-gradient(to right, var(--color-primary-one), var(--color-second-one));
-  background: linear-gradient(to left, var(--color-primary-one), var(--color-second-one));
+	position: relative;
+	border: 0.1em solid var(--color-primary-one);
+	color: rgb(252, 165, 252);
+
+	text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.363), 
+		0 0 1em rgb(255, 0, 255);
+
+	box-shadow: inset 0 0 .4em 0 var(--color-primary-one), 
+		0 0 .6em 0 var(--color-primary-one);
+} 
+
+.control::before {
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	background: linear-gradient(90deg, var(--color-primary-one) 0%, violet 50%, var(--color-primary-one) 100%);
+	top: 120%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	transform: perspective(1em) rotateX(45deg) scale(1.1, .3);
+	filter: blur(1em);
+	opacity: .5;
 }
 
-.banner button i {
+.control::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--color-primary-one);
+	z-index: -1;
+	box-shadow: 0 0 2em .5em var(--color-primary-one);
+	border-radius: 0.5rem;
+	opacity: 0;
+} 
+
+.control:hover, 
+.control:focus {
+	background: var(--color-primary-one);
+	color: #01122e;
+	text-shadow: none;
+	transition: all .1s ease-in;
+} 
+
+.control:hover::after,
+.control:hover::before, 
+.control:focus::before, 
+.control:focus::after {
+	opacity: 1; 
+}
+
+.banner i {
   font-size: 20px;
   margin-right: 10px;
 }
@@ -225,6 +271,16 @@ header {
   100% {
     transform: translateY(0) rotateY(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 
+    0 0 5px #710057,
+    0 0 10px  rgb(255, 0, 255),
+    0 0 15px  rgb(253, 88, 253),
+    0 0 20px #036dab; 
   }
 }
 
@@ -269,9 +325,8 @@ header {
 }
 
 .menu-link:hover {
-  color: var(--color-second-one);
+  color: rgb(225, 4, 188);
   text-shadow: 2px 2px 2px #000;
-  /* text-shadow: 3px 3px 15px var(--color-second-one); */
 }
 
 .social-media {
@@ -297,9 +352,8 @@ header {
 
 .social-media i:hover {
   font-size: 1.4rem;
-  /* background-color: var(--color-second-one); */
   color: var(--color-second-one);
-  box-shadow: .2rem -0.1rem .3rem var(--color-second-one);
+  box-shadow: 0rem 0rem 1rem var(--color-second-one);
   transition: 0.5s;
 }
 
@@ -310,8 +364,6 @@ header {
   align-items: center;
   justify-content: center;
   letter-spacing: 0.1rem;
-  border: yellow 1px solid;
-
 }
 
 .sessao-header h2 {
@@ -333,8 +385,6 @@ header {
   height: 100%;
   margin-bottom: 2rem;
   flex-wrap: wrap;
-
-  border: red 1px solid;
 }
 
 .imageprofile {
@@ -366,13 +416,9 @@ header {
 }
 
 .card-sobre {
-  /* width: 50%;
-  min-width: 500px; */
   width: 700px;
   height: 100%;
   text-align: justify;
-  border: green 1px solid;
-
 }
 
 .card-sobre p {
@@ -406,7 +452,6 @@ header {
 .card-tecs i:hover{
   text-shadow: 0.1rem 0.1rem 3rem #a01ce7;
   transition: 0.5s;
-
 }
 
 .card-tecs p{
@@ -437,8 +482,8 @@ header {
   padding: 0.6rem;
   border-radius: 0.5rem;
   background: #036dab;
-  background: -webkit-linear-gradient(to bottom, #036dab, #000a1a); 
-  background: linear-gradient(to bottom, #036dab, #00001a); 
+  background: -webkit-linear-gradient(to bottom, #036dab, var(--color-bg-dark)); 
+  background: linear-gradient(to bottom, #036dab, var(--color-bg-dark)); 
   border:var(--color-primary-one) 1px solid;
   margin: 0 0.5rem 1.5rem;
 }
@@ -476,8 +521,6 @@ header {
   position: relative; 
   transition: all 1s; 
   text-align: center;
-  border: 2px yellow solid;
-
 }
 
 .card-info h3 {
@@ -501,7 +544,6 @@ header {
   width: 100%;
   margin-bottom: 0.5rem;
   height: 35%;
-  border: 2px red solid;
 }
 
 .btnCard {
@@ -512,8 +554,7 @@ header {
   margin-bottom: 1.5rem;
   font-size: 0.8rem;
   padding: 8px;
-
-  box-shadow: var(--color-second-one) 0.1rem 0.1rem 0.1rem; 
+  box-shadow: #4f0071 0.1rem 0.1rem 0.1rem; 
 }
 
 .card-info .construcao {
@@ -529,6 +570,9 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.tecs img {
   height: 18px;
   width: auto;
 }
@@ -544,7 +588,6 @@ header {
   min-height: 600px;
   position: relative;
   padding-bottom: 7rem;
-  border: greenyellow solid 5px;
 }
 
 .contato {
@@ -556,7 +599,6 @@ header {
   height: 100%;
   max-width: 900px;
   margin: auto;
-  border: 1px solid salmon;
 }
 
 .card-contato {
@@ -573,11 +615,6 @@ header {
   font-family: var(--font-action);  
   box-shadow: var(--color-primary-one) 1px 1px 8px 1px;
   margin: 10px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10%; */
 }
 
 .card-contato:hover {
@@ -600,13 +637,11 @@ header {
 }
 
 .card-contato p, 
-/* .card-contato button, */
 .btnContact {
   margin-top: 20px;
   opacity: 0;
 }
 
-/* .card-contato button, */
 .btnContact {
   display: block;
   margin-inline: auto;
@@ -618,7 +653,6 @@ header {
   border-radius: 15px;
   font-size: 0.8rem;
   padding: 8px;
-  
 }
 .card-contato:hover p, 
 .card-contato:hover .btnContact {
@@ -644,21 +678,14 @@ footer{
 }
 
 .footer-content{
-  /* width: 60%; */
-  /* min-width: 200px; */
-  /* display: flex; */
-  /* justify-content: space-between; */
-  border: blue 1px solid;
   text-align: center;
   text-shadow: #000 2px 2px 3px;
-
 }
 
 .footer-content p{
   font-family: var(--font-primary);
   color: var(--color-contrast);
   font-size: 1rem;
-  /* border: yellow 1px solid; */
 }
 
 .footer-content i {
@@ -686,14 +713,12 @@ footer{
 }
 
 @media (max-width: 650px){
-  
   .img-wrapper video {
     object-position: left;
   }
 }
 
 @media (max-width: 380px){
-
   .banner h1 {
     font-size: 2.5rem;
   }
@@ -725,5 +750,4 @@ footer{
   .card-contato h3{
     font-size: 1rem;
   }
-  
 }
