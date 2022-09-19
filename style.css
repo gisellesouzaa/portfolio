@@ -160,7 +160,7 @@ header {
 
 .banner {
   position: absolute;
-  top: 30%;
+  bottom: 35%;
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -477,7 +477,7 @@ header {
   position: relative;
   flex: 0 1 30%;
   min-width: 280px;
-  height: 75vh; 
+  height: 65vh; 
   min-height: 450px;
   padding: 0.6rem;
   border-radius: 0.5rem;
@@ -716,19 +716,20 @@ footer{
   .img-wrapper video {
     object-position: left;
   }
+
+  .card {
+    height: 60vh;
+  }
+  
 }
 
-@media (max-width: 380px){
-  .banner h1 {
-    font-size: 2.5rem;
+@media (max-width: 600px){
+  .card {
+    height: 60vh;
+    flex: 0 1 90%;
   }
 
-  .banner h2,
-  .sessao-header h2 {
-    font-size: 1.8rem
-  }
-
-/* Contato */
+   /* Contato */
   .card-contato {
     color: rgb(225, 4, 188);
     text-shadow: var(--color-bg-dark) 0.04rem 0.04rem 0.1rem;
@@ -736,6 +737,7 @@ footer{
     border: 1px solid #ffffff7d;
     box-shadow:  rgb(225, 4, 188) 1px 1px 8px 1px; 
     transition: .5s;
+    padding-inline: 0;
   }
   
   .card-contato i {
@@ -750,4 +752,17 @@ footer{
   .card-contato h3{
     font-size: 1rem;
   }
+}
+
+
+@media (max-width: 380px){
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner h2,
+  .sessao-header h2 {
+    font-size: 1.8rem
+  }
+
 }
