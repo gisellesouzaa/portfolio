@@ -1,10 +1,10 @@
 <h1 align="center">Portfolio</h1>
-<p align="center">Webpage criada para agrupar os links dos projetos realizados durante os meus estudos de programação.</p>
+<p align="center">Webpage criada para reunir e apresentar alguns dos principais projetos desenvolvidos ao longo dos meus estudos de programação.</p>
 
 ---
 
 <h1 align="center">
-  <img alt="Gif da webpage" title="WeatherApp" src="./imagens/paginaPortfolio.gif" />
+  <img alt="Gif da webpage" title="Portfólio" src="./imagens/paginaPortfolio.gif" />
 </h1>
 
 
