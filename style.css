@@ -439,6 +439,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   min-height: 80vh;
+  padding-inline: 15%;
 }
 
 .card-tecs i{
@@ -564,6 +565,7 @@ header {
   background-image: url(https://i.pinimg.com/736x/a8/eb/4c/a8eb4c6e3963e05255ffd155c42feffc.jpg);
   background-size: cover;
   filter: grayscale(0.4);
+  cursor: not-allowed;
 }
 
 .tecs {
@@ -575,6 +577,43 @@ header {
 .tecs img {
   height: 18px;
   width: auto;
+}
+
+ /* Estilos para o carrossel */
+ #carousel-container {
+  width: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#image-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para os botões de navegação */
+
+#nav-buttons-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+#prev-btn, #next-btn {
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--color-primary-one);
+}
+
+#prev-btn:hover, #next-btn:hover {
+  color: var(--color-second-one);
+  text-shadow: 0rem 0rem 1rem var(--color-second-one);
+  transition: 0.5s;
 }
 
 /* ** CONTATO ** */
@@ -713,12 +752,21 @@ footer{
 }
 
 @media (max-width: 650px){
+
+  #carousel-container {
+    width: 90%;
+  }
+
   .img-wrapper video {
     object-position: left;
   }
 
   .card {
     height: 60vh;
+  }
+
+  .conhecimentos{
+    padding-inline: 0;
   }
   
 }
